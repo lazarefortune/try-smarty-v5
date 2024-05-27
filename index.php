@@ -23,7 +23,7 @@ session_start();
 try {
     $smarty->setCaching(Smarty::CACHING_OFF);
 
-    $smarty->display('extends:layout.tpl|index.tpl');
+    $smarty->display('extends:layouts/layout.tpl|index.tpl');
 } catch ( \Smarty\Exception $e ) {
 } catch ( Exception $e ) {
 }
