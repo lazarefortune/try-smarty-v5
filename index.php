@@ -17,7 +17,6 @@ $smarty->setExtensions([
 
 //$smarty->addPluginsDir( ROOT . 'libs/smarty-plugins/' );
 
-
 session_start();
 
 try {
@@ -25,5 +24,7 @@ try {
 
     $smarty->display('extends:layouts/layout.tpl|index.tpl');
 } catch ( \Smarty\Exception $e ) {
+    die( $e->getMessage() );
 } catch ( Exception $e ) {
+    die( $e->getMessage() );
 }
