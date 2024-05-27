@@ -2,7 +2,6 @@
 
 require_once 'vendor/autoload.php';
 require_once 'config.php';
-//dd(ROOT . '/templates/');
 
 use App\SmartyView;
 use \Smarty\Smarty;
@@ -23,12 +22,8 @@ session_start();
 
 try {
     $smarty->setCaching(Smarty::CACHING_OFF);
-//    $smarty->displayWithLayout( 'layout.tpl', 'index.tpl');
-//    $smarty->display( 'index.tpl' );
-//    $smarty->display( 'extends:layout.tpl|index.tpl' );
+
     $smarty->display('extends:layout.tpl|index.tpl');
-//    $smarty->display( 'extends:layouts/layout.tpl|index.tpl' );
-//    $smarty->display( 'extends:layouts/layout.tpl' );
 } catch ( \Smarty\Exception $e ) {
 } catch ( Exception $e ) {
 }
